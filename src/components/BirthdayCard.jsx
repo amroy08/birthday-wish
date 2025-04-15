@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import confetti from "canvas-confetti";
 import { useEffect, useState } from "react";
+import Typewriter from "./Typewriter";
+import FloatingEmojis from "./FloatingEmojis";
 
 const BirthdayCard = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -22,15 +24,18 @@ const BirthdayCard = () => {
 
   return (
     <>
+      <FloatingEmojis />
+
       <motion.div
         initial={{ opacity: 0, scale: 0.7, y: -50 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
         className="relative z-10 bg-gradient-to-br from-purple-700 via-pink-600 to-blue-500 px-6 py-8 sm:px-8 sm:py-10 md:p-10 rounded-3xl shadow-[0_20px_60px_rgba(255,255,255,0.15)] w-full max-w-[90%] sm:max-w-lg mx-auto text-center border border-white/10 backdrop-blur-md"
       >
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-script text-white drop-shadow-md mb-4 sm:mb-6 leading-tight">
-          🎉 Happy Birthday Sharviiii! 
-        </h1>
+    <h1 className="text-4xl sm:text-5xl md:text-6xl font-script text-white drop-shadow-md mb-4 sm:mb-6 leading-tight">
+  🎉 Happy Birthday Sharviii
+ 
+</h1>
 
         <p className="text-base sm:text-lg font-light leading-relaxed text-white/90">
           Wishing you a magical day filled with love, laughter, and all your
@@ -64,4 +69,3 @@ const BirthdayCard = () => {
 };
 
 export default BirthdayCard;
-  
